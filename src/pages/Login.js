@@ -12,10 +12,13 @@ class Login extends Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const data = await Axios.post(`http://localhost:1234/login`, {
-        email: this.state.email,
-        password: this.state.password,
-      });
+      const data = await Axios.post(
+        `https://young-peak-88511.herokuapp.com/login`,
+        {
+          email: this.state.email,
+          password: this.state.password,
+        }
+      );
       this.props.setUser(data.data);
       window.location = "/";
     } catch (err) {

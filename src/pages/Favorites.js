@@ -6,9 +6,12 @@ import Axios from "axios";
 import Fav from "../components/Fav";
 class FavPage extends Component {
   async componentDidMount() {
-    const data = await Axios.post(`http://localhost:1234/getUserFavorites`, {
-      userId: this.props.user.id,
-    });
+    const data = await Axios.post(
+      `https://young-peak-88511.herokuapp.com/getUserFavorites`,
+      {
+        userId: this.props.user.id,
+      }
+    );
     console.log(data);
     this.props.setFav(data.data);
   }

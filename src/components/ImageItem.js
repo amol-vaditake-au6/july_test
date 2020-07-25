@@ -4,10 +4,13 @@ import Axios from "axios";
 
 const ImageItem = ({ image, user }) => {
   const addtoFav = async () => {
-    const data = await Axios.post(`http://localhost:1234/fav`, {
-      imageId: image.id,
-      userId: user.id,
-    });
+    const data = await Axios.post(
+      `https://young-peak-88511.herokuapp.com/fav`,
+      {
+        imageId: image.id,
+        userId: user.id,
+      }
+    );
     console.log(data);
     if (data.data.massage === "added") {
       alert("Added to Favorites Succesfully");

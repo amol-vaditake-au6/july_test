@@ -6,9 +6,12 @@ import Axios from "axios";
 import Images from "../components/Images";
 class MyImages extends Component {
   async componentDidMount() {
-    const data = await Axios.post("http://localhost:1234/userImages", {
-      userId: this.props.user.id,
-    });
+    const data = await Axios.post(
+      "https://young-peak-88511.herokuapp.com/userImages",
+      {
+        userId: this.props.user.id,
+      }
+    );
     this.props.setImages(data.data);
   }
 

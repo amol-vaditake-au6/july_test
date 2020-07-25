@@ -18,7 +18,10 @@ const FileInput = (user) => {
     formData.append("privacy", formState.privacy);
     formData.append("id", user.user.id);
     try {
-      await Axios.post(`http://localhost:1234/upload`, formData);
+      await Axios.post(
+        `https://young-peak-88511.herokuapp.com/upload`,
+        formData
+      );
       alert("image uploade successfully");
       window.location.reload();
     } catch (err) {

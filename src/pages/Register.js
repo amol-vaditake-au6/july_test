@@ -11,7 +11,7 @@ export default class componentName extends Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await Axios.post(`http://localhost:1234/register`, {
+      await Axios.post(`https://young-peak-88511.herokuapp.com/register`, {
         name: this.state.name,
         email: this.state.email,
         password: this.state.password,

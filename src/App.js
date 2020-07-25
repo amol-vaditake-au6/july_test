@@ -18,7 +18,7 @@ function App() {
         <Route exact path="/" component={Homepage} />
         <Route exact path="/fav" component={FavPage} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/myImages" component={MyImages} />
+        <Route exact path="/myImages" component={FavPage} />
         <Route exact path="/upload" component={UploadPage} />
         <Redirect to="/" />
       </Switch>
